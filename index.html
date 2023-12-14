@@ -201,39 +201,25 @@
 		of learned fused feature space.</h2>
         </figure>
        <p>
-      Aptamers – short sequences of RNA, DNA, or peptides, have emerged as powerful tools with
-      unique binding properties for specific target molecules. They hold immense potential especially
-      in diagnostics, therapeutics, and biosensing. However, traditional lab-based methods for
-      discovering aptamers are labor-intensive, costly and often fail to yield high-affinity aptamers.
-      The current benchmark is SELEX which takes up to 02 years for finding a single high affinity
-      Aptamer. The goal of this project was not only to develop a faster alternative of SELEX to
-      accelerate the discovery of Aptamers and cut down the required time but also outperform it in
-      terms of precision.
-         <br><br>
-      We developed “cAPTured”, a fuzzy continual machine learning model for predicting
-      aptamer-target protein interactions. cAPTured used four distinct feature encodings: k-mer and
-      revck-mer based aptamer-sequence encoding, as well as AAC and PseAAC based target
-      protein-sequence encoding. These encoding methods were used to extract essential
-      information from aptamer and protein sequences. Subsequently, cAPTured fused and
-      embedded these encoded features into a low-dimensional latent space, preserving statistically
-      significant features. Here, the goal was to design the model to be agnostic to distribution shifts,
-      allowing it to adapt and update its learned feature space in real-time based on a non-stationary
-      interaction-pair data stream.
-         <br><br>
-      Our results found that cAPTured cuts the time required for aptamer discovery from the current
-      benchmark of around 2-3 years (which is required by SELEX) to just a few minutes. cAPTured
-      outperforms existing benchmarks by exhibiting a 04% increase in precision when tested on
-      benchmark lab datasets. Notably due to its inherent feature engineering and fuzzy neural
-      network-based design, cAPTured excels in handling limited data scenarios (with just 400, 300 or
-      even 200 training samples) and maintaining relevance over time (05 pairs of distribution shifts),
-      preventing the model from becoming outdated as new aptamer-target interaction pairs are
-      discovered. This was additionally verified by mapping a t-SNE plot. These results underscore
-      the potential of cAPTured as a valuable tool in the field of bioinformatics.
-         <br><br>
-      In conclusion, using cAPTured, bioinformatics engineers can massively reduce the experiment
-      duration to find a high affinity aptamer by 700x times from the current benchmark in addition to
-      increasing the precision by 04%. cAPTured’s ability to adapt to distribution shifts and its robust
-      performance in limited data scenarios position it as a versatile and enduring tool.
+      Accurate breast cancer prognosis is essential for identifying the disease early, avoiding unnecessary and harmful treatments, 
+      and reducing mortality rates with personalized treatment plans. However, designing a prognosis model continues to be challenging. 
+      However, creating a reliable prognosis model is challenging due to the complex interplay of various genetic factors, diverse 
+      outcomes of drug therapies, the unpredictable nature of gene expressions, and the imbalanced distribution of data in multimodal cancer datasets.	
+      <br><br>
+      Even machine learning (ML) models face difficulties because collecting labeled omics data is expensive and requires specialized 
+      expertise, limiting the available data. This scarcity makes traditional ML and deep learning models difficult to design, as they 
+      typically rely on large datasets to understand intricate patterns and can overfit without sufficient data, leading to reduced accuracy. 
+      Additionally, existing models operate under a closed-world assumption, meaning they cannot adapt to new data in real-time without undergoing retraining.
+      <br><br>
+      This study introduces a novel 'Fuzzy' approach to breast cancer prognosis, treating the problem as an incremental learning challenge. 
+      This method enables the model to continuously update its learned features using a dynamic multimodal data stream, mimicking the human 
+      brain's ability to learn over time. Our model demonstrates its capability to understand complex relationships among different multimodal 
+      attributes, even when trained on limited and imbalanced data, by mapping it to a high-dimensional 'fused' feature space.
+      <br><br>
+      In conclusion, our model can help to increase prognosis accuracy by 16.81% on just training on 300 samples without losing 
+      consistency when training dataset reduces/ increases. Our model’s ability to adapt to distribution shifts and its robust performance 
+      in limited data scenarios position it as a versatile and enduring tool. The present study further suggests that using fuzzy intelligence 
+      holds promise for improving breast cancer prognosis.
       <br>
       <br>
       </p>          
@@ -279,34 +265,6 @@
       </div>
     </div>
     Animation. -->
-
-
-    <!-- Concurrent Work.
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    Concurrent Work. -->
 
   </div>
 </section>
